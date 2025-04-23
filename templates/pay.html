@@ -1,0 +1,107 @@
+{% extends 'shop.html' %}
+
+{% load static %}
+
+{% block search %}
+                        <div class="d-flex m-3 me-0">
+                            <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+                            
+                            <a href="#" class="my-auto">
+                                <i class="fas fa-user fa-2x"></i>
+                            </a>
+                        </div>
+                        {% endblock %}
+
+                        {% block single_header %}
+        <!-- Single Page Header start -->
+        <div class="container-fluid page-header py-5">
+            <h1 class="text-center text-white display-6">Payment</h1>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item active text-white">Shop</li>
+            </ol>
+        </div>
+        <!-- Single Page Header End -->
+         {% endblock %}
+
+         {% block shop %}
+         <div class="col-lg-9">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Order id</th>
+                            <th scope="col">First name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Town</th>
+                            <th scope="col">Mobile</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            
+                            
+                            <td class="py-5">{{billing_detail.order_id}}</td>
+                            <td class="py-5">{{billing_detail.first_name}}</td>
+                            <td class="py-5">{{billing_detail.address}}</td>
+                            <td class="py-5">{{billing_detail.town}}</td>
+                            <td class="py-5">{{billing_detail.mobile_number}}</td>
+                        </tr>
+                       
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+                 
+         
+             <div class="col-12">
+     
+                 pay with 
+                 {{form.render}}
+             </div>
+
+         
+                 
+            </div>
+         
+         {% endblock %}
+
+                        {% block fruit_shop %}
+                        <!-- Fruits Shop Start-->
+                        <div class="container-fluid fruite py-5">
+                            <div class="container py-5">
+                                <h1 class="mb-4">Fresh fruits shop</h1>
+                                <div class="row g-4">
+                                    <div class="col-lg-12">
+                                
+                                       
+                                           
+                                        
+                                        <div class="row g-4">
+                                            <div class="col-lg-3">
+                                                <div class="row g-4">
+                                                    
+                                                    
+                                                   
+                                                          
+                                                   
+                                                    
+                                                    <div class="col-lg-12">
+                                                        <div class="position-relative">
+                                                            <img src="{% static 'img/banner-fruits.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                                                            <div class="position-absolute" style="top: 50%; right: 10px; transform: translateY(-50%);">
+                                                                <h3 class="text-secondary fw-bold">Fresh <br> Fruits <br> Banner</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% endblock %}
+
+                                   
+
+    

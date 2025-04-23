@@ -1,0 +1,217 @@
+
+{% extends 'shop.html' %}
+{% load static %}
+
+{% block search %}
+    <a href="/shop/cart/" class="position-relative me-4 my-auto">
+        <i class="fa fa-shopping-bag fa-2x"></i>
+        <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1 cart-number" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">{{request.session.cart_data_object|length}}</span>
+    </a>
+    <a href="#" class="my-auto">
+        <i class="fas fa-user fa-2x"></i>
+    </a>
+</div>
+{% endblock %}
+
+{% block single_header %}
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+    <h1 class="text-center text-white display-6">Search Result(s)</h1>
+    <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+        <li class="breadcrumb-item active text-white">Shop</li>
+    </ol>
+</div>
+<!-- Single Page Header End -->
+ {% endblock %}
+
+{% block fruit_shop %}
+<!-- Fruits Shop Start-->
+<div class="container-fluid fruite py-5">
+    <div class="container py-5">
+        <h1 class="mb-4">Fresh fruits shop</h1>
+        <div class="row g-4">
+            <div class="col-lg-12">
+        
+              
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <div class="row g-4">
+                            
+                            
+                                  
+                           
+                            <div class="col-lg-12">
+                                <h4 class="mb-3">Featured products</h4>
+                                {% for items in featured_products %}
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <div class="rounded me-4" style="width: 100px; height: 100px;">
+                                        <img src="{{items.product_image.url}}" class="img-fluid rounded" alt="">
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-2">{{items.product_name}}</h6>
+                                        <div class="d-flex mb-2">
+                                            <i class="fa fa-star text-secondary"></i>
+                                            <i class="fa fa-star text-secondary"></i>
+                                            <i class="fa fa-star text-secondary"></i>
+                                            <i class="fa fa-star text-secondary"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <div class="d-flex mb-2">
+                                            <h5 class="fw-bold me-2">{{items.featured_price}} $</h5>
+                                            <h5 class="text-danger text-decoration-line-through">{{items.price}} $</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                <div class="d-flex justify-content-center my-4">
+                                    <a href="shop/featured_products/" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">Vew More</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="position-relative">
+                                    <img src="{% static 'img/banner-fruits.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                                    <div class="position-absolute" style="top: 50%; right: 10px; transform: translateY(-50%);">
+                                        <h3 class="text-secondary fw-bold">Fresh <br> Fruits <br> Banner</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endblock %}
+
+{% block shop %}
+
+{% if message %}
+<div class="col-md-6 col-lg-6 col-xl-4 item_count" >
+    
+    <h3 class="">{{message}}</h3>
+    
+</div>
+{% endif %}
+
+
+
+{% for product in products %}
+                                    
+                                    <div class="col-md-6 col-lg-6 col-xl-4 item_count" >
+                                        
+                                        <div class="rounded position-relative fruite-item" >
+                                            <div class="fruite-img">
+                                                <img src="{{product.product_image.url}}" id="product_img" class="img-fluid w-100 rounded-top" alt="">
+                                            </div>
+                                            <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">{{product.product_quality}}</div>
+                                            <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                <a href="{{product.slug}}-{{product.id}}"id="product_name"> <h4>{{product.product_name}}</h4> </a>
+                                                <p>{{product.short_description}}</p>
+                                                <div class="d-flex justify-content-between flex-lg-wrap">
+                                                    <p class="text-dark fs-5 fw-bold mb-0"id="product_price">${{product.price}}</p>
+                                                    <input type="hidden" value="{{product.product_name}}" class="product-name-{{product.id}}"/>
+                                                    <input type="hidden" value="1" class="product-quantity-{{product.id}}"/>
+                                                    <input type="hidden" value="{{product.product_image.url}}" class="product-image-{{product.id}}"/>
+                                                    <input type="hidden" value="{{product.price}}" class="product-price-{{product.id}}"/>
+                                                    <input type="hidden" value="{{product.id}}" class="product-id-{{product.id}}"/>
+                                                    <button type="button" class="btn border border-secondary rounded-pill px-3 text-primary add-to-cart" data-index="{{product.id}}"><i class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                {% endfor %}
+                                
+                                {% endblock %}
+
+
+                                {% block script %}
+                                <script>
+                                  function searchItem(){
+                                  var post = document.getElementById('product_page')
+                                 var checked = $('input[type="radio"]:checked').val()
+                                  var range = $('input[type="range"]').val()
+                                  var search = $('#search').val()
+                                  var values = []
+                                  $('input[type="radio"]').each(function(){
+                                      values.push($(this).val())
+                                  })
+                                  var length = values.length
+                                 
+                                  $.ajax({
+                                      url: 'filter',
+                                      type: 'GET',
+                                      data: {
+                                          'checked': checked,
+                                          'range': range,
+                                          'search': search
+                                      },
+                                      beforeSend: function(){
+                              
+                                      },
+                                      success: function(response){
+                                          $('.filter').html(response.product);
+                                          var message = response.message;
+                                          
+                                                      
+                                          if(message){
+                                              $('.filter').html('product unavailable')
+                                          }
+                                          
+                                      },
+                                      error: function(){
+                              
+                                      }
+                                  })
+                                  
+                                      
+                                 
+                                  }
+                              
+                                 $('.add-to-cart').on('click',function(){
+                                  var product_id = $(this).attr('data-index')
+                                  var name = $('.product-name-' + product_id).val()
+                                  var image = $('.product-image-' + product_id).val()
+                                  var price = $('.product-price-' + product_id).val()
+                                  var quantity = $('.product-quantity-' + product_id).val()
+                                  var id = $('.product-id-' + product_id).val()
+                                  var item = $(this).text('item added to cart')
+                                  console.log(name)
+                                  console.log(price)
+                                  console.log(id)
+                                  console.log(image)
+                                  
+                                  
+                                  
+                                  $.ajax({
+                                      url: '{% url "add_to_cart" %}',
+                                      type: 'GET',
+                                      data: {
+                                          'product_id': id,
+                                          'product_name': name,
+                                          'quantity': quantity,
+                                          'price': price,
+                                          'image': image        
+                                      },
+                                      beforeSend: function(){
+                                    
+                                      },
+                                      success:function(response){
+                                      $('.cart-number').text(response.length)
+                                      console.log(response)
+                                      },
+                                      error: function(){
+                              
+                                      }
+                                  })
+                                  
+                                 })
+                                  
+                              
+                              
+                                 $('.add-to-cart-filter').on('click', function(){
+                                  console.log('good')
+                                 })
+                              
+                              
+                                </script>
+                              {% endblock %}
+                              

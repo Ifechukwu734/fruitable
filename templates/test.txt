@@ -1,0 +1,38 @@
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan, sapien eget ullamcorper rutrum, purus odio posuere mi, sed ullamcorper augue lorem in risus. Quisque scelerisque lobortis ipsum a tempor. Donec ultricies lacinia mauris, varius egestas ipsum tincidunt sit amet. Proin in molestie odio, nec luctus turpis. Vivamus rutrum quis nisi et aliquam. In ornare, lorem accumsan auctor porta, tellus sem mattis risus, eget condimentum augue elit eu nisi. Nunc fringilla odio eget sapien pharetra consequat. Donec pulvinar ex quis sem suscipit convallis. Duis ex quam, pharetra eget ex aliquet, sodales luctus purus. Mauris convallis, tellus vel sodales viverra, massa tortor finibus lacus, vitae ullamcorper velit est ac sapien. Fusce at quam suscipit, lobortis tellus vitae, pellentesque velit.
+
+Quisque accumsan tellus et eros venenatis pulvinar. Proin nec urna vel justo iaculis facilisis. Proin id odio lobortis sem condimentum ullamcorper id eu nulla. Vestibulum placerat felis ut nunc sagittis suscipit. Vestibulum diam justo, luctus a quam non, scelerisque accumsan nisl. Vestibulum volutpat orci ut nisi scelerisque iaculis. Ut malesuada nulla neque, eget sollicitudin turpis elementum ac. Maecenas id diam ut turpis volutpat finibus. Vestibulum gravida viverra sapien sit amet sagittis. Morbi ut aliquet eros.
+
+Aenean tincidunt nunc in purus placerat mattis. Sed porttitor ante urna, eget mattis felis fermentum quis. Donec nec ullamcorper sapien, eu vestibulum augue. Suspendisse ac ligula dapibus, interdum lorem quis, porta orci. Sed ullamcorper tristique auctor. Aliquam sollicitudin viverra libero in porttitor. Proin vehicula justo mattis nulla accumsan, ut sagittis nisi mattis. Duis euismod posuere ligula ullamcorper egestas. Quisque malesuada, diam dapibus placerat eleifend, ante augue ullamcorper eros, nec bibendum nibh tellus id leo. Nullam iaculis felis et nisl tincidunt, a vehicula ante egestas. Nulla sed fringilla quam. Nam id enim lorem. Aenean consequat libero magna, ac tincidunt arcu aliquet et. Sed volutpat ligula vel lorem vehicula, sed dignissim magna pharetra. Vestibulum eget purus dictum, porta ipsum non, tristique diam.
+
+Aenean auctor a nulla nec finibus. Ut eu justo nulla. Aliquam erat volutpat. Proin eget porta diam, sed aliquam lectus. Sed tempus enim eu nulla pretium finibus. Etiam fermentum vel lorem in venenatis. Praesent non libero vitae ipsum euismod condimentum vel ut metus. Mauris et velit erat. Praesent sit amet diam ligula. Sed eu faucibus lorem, non lobortis massa.
+
+Phasellus in nibh est. Donec eget sodales turpis. Nullam vitae arcu congue, interdum urna vitae, tristique ligula. Fusce quis nulla posuere, sollicitudin orci eu, tristique nulla. Suspendisse tristique malesuada magna vitae sollicitudin. Mauris nec erat commodo mauris elementum tempus. Sed congue ante id dui pretium maximus. Donec sollicitudin, dui at bibendum egestas, turpis massa tempus tellus, a congue neque velit vel purus. Nam malesuada est tortor, in maximus mi interdum a. Proin in imperdiet risus. Sed luctus tristique felis, ac dapibus diam elementum vel. Sed molestie ex sed aliquam vestibulum. Quisque nec nisl sit amet massa pharetra vestibulum.
+
+
+<a href="#" class="rounded active ">2</a>
+
+<div class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Repeat Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Email Address</label>
+                        <input id="pass" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <label for="tab-1">Already Member?</a>
+                    </div>
+                </div>
