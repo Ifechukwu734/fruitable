@@ -152,7 +152,7 @@ JAZZMIN_SETTINGS = {
 
 #paypal settings
 
-PAYPAL_RECEIVER_EMAIL = 'sb-df43ev33085844@business.example.com'
+PAYPAL_RECEIVER_EMAIL = ''
 
 PAYPAL_TEST = True 
 # Not recommended for production
@@ -160,8 +160,8 @@ PAYPAL_TEST = True
 
 #Email credentials
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'ifechukwuaugustine61@gmail.com'
-EMAIL_HOST_PASSWORD = 'bhaxxbgyzqddsbml'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 EMAIL_PORT = 465
